@@ -43,7 +43,7 @@ def int_to_text_sequence(seq):
     """
     text_sequence = []
     for c in seq:
-        if c == 28: #ctc/pad char
+        if c == 93: #ctc/pad char
             ch = ''
         else:
             ch = index_map[c]

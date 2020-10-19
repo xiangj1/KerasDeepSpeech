@@ -105,7 +105,7 @@ def main(args):
 
         elif(args.model_arch==2):
             # DeepSpeech2 model
-            model = ds2_gru_model(input_dim=161, fc_size=args.fc_size, rnn_size=args.rnn_size, output_dim=29)
+            model = ds2_gru_model(input_dim=161, fc_size=args.fc_size, rnn_size=args.rnn_size, output_dim=94)
 
         elif(args.model_arch==3):
             # own model
@@ -231,7 +231,7 @@ if __name__ == '__main__':
                             ' e.g. --loadcheckpointpath ./checkpoints/'
                             'TRIMMED_ds_ctc_model/')
 
-    parser.add_argument('--model_arch', type=int, default=3,
+    parser.add_argument('--model_arch', type=int, default=2,
                        help='choose between model_arch versions (when training not loading) '
                             '--model_arch=1 uses DS1 fully connected layers with LSTM'
                             '--model_arch=2 uses DS2 CNN connected with GRU'

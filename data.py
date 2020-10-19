@@ -33,12 +33,12 @@ def combine_all_wavs_and_trans_from_csvs(csvslist, sortagrad=True, createwordlis
         print("Reading csv:",csv)
 
         if os.path.isfile(csv):
-            try:
-                df_new = pd.read_csv(csv, sep=',', encoding='ascii')
-            except:
-                print("NOT - ASCII, use UTF-8")
-                df_new = pd.read_csv(csv, sep=',', encoding='utf-8')
-                df_new.transcript.replace({r'[^\x00-\x7F]+': ''}, regex=True, inplace=True)
+            # try:
+            #     df_new = pd.read_csv(csv, sep=',', encoding='ascii')
+            # except:
+            print("NOT - ASCII, use UTF-8")
+            df_new = pd.read_csv(csv, sep=',', encoding='utf-8')
+            df_new.transcript.replace({r'[^\x00-\x7F]+': ''}, regex=True, inplace=True)
 
             df_all = df_all.append(df_new)
 
