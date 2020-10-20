@@ -30,7 +30,7 @@ from keras.models import Model, Sequential
 from keras.layers.recurrent import SimpleRNN
 from keras.layers import Dense, Activation, Bidirectional, Reshape,Flatten, Lambda, Input,\
     Masking, Convolution1D, BatchNormalization, GRU, Conv1D, RepeatVector, Conv2D
-from keras.optimizers import SGD, adam
+from keras.optimizers import SGD, Adam
 from keras.layers import ZeroPadding1D, Convolution1D, ZeroPadding2D, Convolution2D, MaxPooling2D, GlobalMaxPooling2D
 from keras.layers import TimeDistributed, Dropout
 from keras.layers.merge import add  # , # concatenate BAD FOR COREML
