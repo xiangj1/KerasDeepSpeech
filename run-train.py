@@ -181,7 +181,7 @@ def main(args):
                         validation_data=validdata.next_batch(),
                         validation_steps=args.valid_steps,
                         initial_epoch=0,
-                        verbose=1,
+                        verbose=2,
                         class_weight=None,
                         max_queue_size=10,
                         workers=1,
@@ -246,7 +246,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--learning_rate', type=float, default=0.01,
                         help='the learning rate used by the optimiser')
-    parser.add_argument('--opt', type=str, default='sgd',
+    parser.add_argument('--opt', type=str, default='adam',
                         help='the optimiser to use, default is SGD, ')
 
     parser.add_argument('--sortagrad', type=bool, default=True,
