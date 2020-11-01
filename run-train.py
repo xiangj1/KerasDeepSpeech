@@ -181,7 +181,7 @@ def main(args):
                         validation_data=validdata.next_batch(),
                         validation_steps=args.valid_steps,
                         initial_epoch=0,
-                        verbose=2,
+                        verbose=1,
                         class_weight=None,
                         max_queue_size=10,
                         workers=1,
