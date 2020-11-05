@@ -115,6 +115,8 @@ class ReportCallback(callbacks.Callback):
         self.validate_epoch_end(verbose=1)
 
         if self.save:
+            save_model(self.model, name="./checkpoints/epoch/model2_DS2_-{}".format(
+                        self.runtimestr))
             # check to see lowest wer/ler on prev values
             if(len(self.mean_wer_log) > 2):
                 lastWER = self.mean_wer_log[-1]
