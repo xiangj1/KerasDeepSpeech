@@ -218,9 +218,9 @@ if __name__ == '__main__':
     parser.add_argument('--valid_files', type=str, default='',
                         help='list of all validation files, seperate by a comma if multiple')
 
-    parser.add_argument('--train_steps', type=int, default=None,
+    parser.add_argument('--train_steps', type=int, default=0,
                         help='number of steps for each epoch. Use None for automatic')
-    parser.add_argument('--valid_steps', type=int, default=None,
+    parser.add_argument('--valid_steps', type=int, default=0,
                         help='number of validsteps for each epoch. Use None for automatic')
 
     parser.add_argument('--fc_size', type=int, default=512,
